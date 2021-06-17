@@ -28,6 +28,7 @@ function Header(props) {
         <Flex
             as="header"
             align="center"
+            position="fixed"
             zIndex="9999"
             padding="1.5rem"
             width="full"

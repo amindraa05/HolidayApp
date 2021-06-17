@@ -57,7 +57,7 @@ function Home(props) {
     return (
         <>
             <Layout>
-                <Container maxW="6xl" paddingX={{base:7,md:20,lg:30}} paddingY={{base:3,md:10,lg:10}}>
+                <Container maxW="6xl" paddingX={{base:7,md:20,lg:30}} paddingY={{base:20,md:20,lg:20}}>
                     <Fade duration={700} distance="30px" fraction={0.4} bottom>
                         <Heading as="h1" letterSpacing={"-.0.001rem"} lineHeight={"-.0.001rem"} fontSize={{ base: "2xl", md: "5xl", lg: "7xl" }}>
                             Holiday incoming ! Get ur new games,movies,or even books to enjoy 🎉🎈
