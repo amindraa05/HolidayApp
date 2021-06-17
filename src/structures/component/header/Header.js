@@ -94,7 +94,7 @@ function Header(props) {
             </Box>
             <Box display={{ base: "block", md: "none", lg: "none" }}>
                 <IconButton size="xs" bg="transparent" icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />} onClick={changeDarkMode} aria-label="button" />
-                <Button size="xs" bg="transparent" onClick={onOpen}>👋</Button>
+                <Button size="xs" bg="transparent" onClick={onOpen}>⛔ⓂⒺⓃⓊ</Button>
             </Box>
         </Flex>
         <Modal
