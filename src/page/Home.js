@@ -26,7 +26,8 @@ function Home(props) {
             }
         };
         axios.request(options).then(function (response) {
-            setgames(response.data)
+            let data = response.data
+            setgames(data)
         }).catch(function (error) {
             console.error(error);
         });
@@ -57,9 +58,9 @@ function Home(props) {
     return (
         <>
             <Layout>
-                <Container maxW="6xl" paddingX={{base:7,md:20,lg:30}} paddingY={{base:20,md:20,lg:20}}>
+                <Container maxW="6xl" paddingX={{base:7,md:20,lg:30}} paddingTop={{base:40,md:40,lg:40}}>
                     <Fade duration={700} distance="30px" fraction={0.4} bottom>
-                        <Heading as="h1" letterSpacing={"-.0.001rem"} lineHeight={"-.0.001rem"} fontSize={{ base: "2xl", md: "5xl", lg: "7xl" }}>
+                        <Heading maxW="950px" as="h1" letterSpacing={"-.0.001rem"} lineHeight={"-.0.001rem"} fontSize={{ base: "2xl", md: "5xl", lg: "7xl" }} textAlign="start">
                             Holiday incoming ! Get ur new games,movies,or even books to enjoy 🎉🎈
                         </Heading>
                     </Fade>
@@ -106,14 +107,15 @@ function Home(props) {
                             </Text>
                         </Box>
                     </Fade>
-                        <Grid
+                    <Fade >
+                    <Grid
                             mt={{base:4,md:8}}
                             templateColumns="repeat(4, 1fr)"
                             gap={5}
                             w="full"
                             h="full"
                         >
-                            {games.map((game,index)=>{
+                            {games.slice(0,8).map((game,index)=>{
                                 return(
                                     <GridItem colSpan={1}>
                                     <Box maxW="full" borderWidth="1px" borderRadius="lg" overflow="hidden" p={{base:0,md:3}}>
@@ -135,6 +137,8 @@ function Home(props) {
                                 )
                             })}
                         </Grid>
+                    </Fade>
+                        
                     <Fade duration={700} distance="30px" fraction={0.4} delay={340} bottom>
                         <Box mt={{base:10,md:20,lg:20}}>
                             <Heading as="h2" letterSpacing={"-.0.001rem"} lineHeight={"-.0.001rem"} color="GrayText" fontSize={{ base: "1xl", md: "3xl", lg: "5xl" }}>Trending Movies</Heading>
@@ -144,14 +148,15 @@ function Home(props) {
                             </Text>
                         </Box>
                     </Fade>
-                        <Grid
+                    <Fade>
+                    <Grid
                             mt={{base:4,md:8}}
                             templateColumns="repeat(4, 1fr)"
                             gap={5}
                             w="full"
                             h="full"
                         >
-                            {movies.map((movie,index)=>{
+                            {movies.slice(0,8).map((movie,index)=>{
                                 return (
                                     <GridItem colSpan={1}>
                                         <Box maxW="full" borderWidth="1px" borderRadius="lg" overflow="hidden" p={{base:0,md:3}}>
@@ -170,6 +175,8 @@ function Home(props) {
                                 )
                             })}
                         </Grid>
+                    </Fade>
+                        
                     <Fade duration={700} distance="30px" fraction={0.4} delay={340} bottom>
                         <Box mt={{base:10,md:20,lg:20}}>
                             <Heading as="h2" letterSpacing={"-.0.001rem"} lineHeight={"-.0.001rem"} color="GrayText" fontSize={{ base: "1xl", md: "3xl", lg: "5xl" }}>Popular NYTimes Books</Heading>
@@ -179,6 +186,7 @@ function Home(props) {
                             </Text>
                         </Box>
                     </Fade>
+                    <Fade>
                     <Grid
                         mt={{base:4,md:8}}
                         templateColumns="repeat(4, 1fr)"
@@ -186,7 +194,7 @@ function Home(props) {
                         w="full"
                         h="full"
                     >
-                        {books.map((book,index)=>{
+                        {books.slice(0,4).map((book,index)=>{
                             return (
                                 <GridItem colSpan={1}>
                                     <Box maxW="full" borderWidth="1px" borderRadius="lg" overflow="hidden" p={{base:0,md:3}}>
@@ -205,6 +213,8 @@ function Home(props) {
                             )
                         })}
                     </Grid>
+                    </Fade>
+                    
                 </Container>
             </Layout>
         </>
