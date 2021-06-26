@@ -110,12 +110,12 @@ function Home(props) {
                     <Fade >
                     <Grid
                             mt={{base:4,md:8}}
-                            templateColumns="repeat(4, 1fr)"
+                            templateColumns="repeat(3, 1fr)"
                             gap={5}
                             w="full"
                             h="full"
                         >
-                            {games.slice(0,8).map((game,index)=>{
+                            {games.slice(0,6).map((game,index)=>{
                                 return(
                                     <GridItem colSpan={1}>
                                     <Box maxW="full" borderWidth="1px" borderRadius="lg" overflow="hidden" p={{base:0,md:3}}>
@@ -151,12 +151,12 @@ function Home(props) {
                     <Fade>
                     <Grid
                             mt={{base:4,md:8}}
-                            templateColumns="repeat(4, 1fr)"
+                            templateColumns="repeat(3, 1fr)"
                             gap={5}
                             w="full"
                             h="full"
                         >
-                            {movies.slice(0,8).map((movie,index)=>{
+                            {movies.slice(0,6).map((movie,index)=>{
                                 return (
                                     <GridItem colSpan={1}>
                                         <Box maxW="full" borderWidth="1px" borderRadius="lg" overflow="hidden" p={{base:0,md:3}}>
@@ -189,12 +189,12 @@ function Home(props) {
                     <Fade>
                     <Grid
                         mt={{base:4,md:8}}
-                        templateColumns="repeat(4, 1fr)"
+                        templateColumns="repeat(3, 1fr)"
                         gap={5}
                         w="full"
                         h="full"
                     >
-                        {books.slice(0,4).map((book,index)=>{
+                        {books.slice(0,6).map((book,index)=>{
                             return (
                                 <GridItem colSpan={1}>
                                     <Box maxW="full" borderWidth="1px" borderRadius="lg" overflow="hidden" p={{base:0,md:3}}>
