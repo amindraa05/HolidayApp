@@ -79,7 +79,6 @@ function Books() {
                             Authoritatively ranked lists of books sold in the United States, sorted by format and genre.
                         </Text>
                     </Fade>
-                    <Fade>
                         <Grid
                             mt={{base:4,md:8}}
                             templateColumns="repeat(3, 1fr)"
@@ -106,7 +105,6 @@ function Books() {
                             )
                         })}
                         </Grid>
-                    </Fade>
                     
                 </Container>
             </Layout>
