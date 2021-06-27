@@ -215,7 +215,7 @@ function Movies() {
                                             >
                                             </Image>
                                             <Box p={{base:1}}>
-                                                <Text fontSize={{base:5,md:13,lg:20}} letterSpacing="wide">{movie.title}</Text>
+                                                <Text fontSize={{base:5,md:13,lg:20}} letterSpacing="wide">{movie.original_name}</Text>
                                                 <Text fontSize={{base:5,md:10,lg:15}} color="gray.500">⭐ {movie.vote_average}</Text>
                                             </Box>
                                         </Box>
@@ -249,7 +249,7 @@ function Movies() {
                                             >
                                             </Image>
                                             <Box p={{base:1}}>
-                                                <Text fontSize={{base:5,md:13,lg:20}} letterSpacing="wide">{movie.title}</Text>
+                                                <Text fontSize={{base:5,md:13,lg:20}} letterSpacing="wide">{movie.original_name}</Text>
                                                 <Text fontSize={{base:5,md:10,lg:15}} color="gray.500">⭐ {movie.vote_average}</Text>
                                             </Box>
                                         </Box>
